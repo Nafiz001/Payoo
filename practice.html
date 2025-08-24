@@ -6,21 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="button1">button 1</button>
-    <button id="button2">button 2</button>
+    <h1>0</h1>
+    <div class="">
+        <button id="button1">button1</button>
+        <button id="button2">button2</button>
+        <button id="button3">button3</button>
 
-    <h1 id="heading1">I am heading 1</h1>
-    <h2 id="heading2">I am heading 2</h2>
+    </div>
     <script>
+        function putNumber(number) {
+            const h1 = document.querySelector('h1');
+            h1.innerText = number;
+        }
         document.getElementById('button1').addEventListener('click', function() {
-            document.getElementById('heading2').style.display = 'none';
-            document.getElementById('heading1').style.display = 'block';
+            putNumber(1);
         });
         document.getElementById('button2').addEventListener('click', function() {
-            document.getElementById('heading1').style.display = 'none';
-            document.getElementById('heading2').style.display = 'block';
+            putNumber(2);
         });
-
+        document.getElementById('button3').addEventListener('click', function() {
+            putNumber(3);
+        });
     </script>
 </body>
 </html>
